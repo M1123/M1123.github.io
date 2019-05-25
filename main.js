@@ -10,7 +10,7 @@ $(()=>{
         let elem=$('<div class="card"></div>');
         $(elem).append('<div class="card-body">'+localStorage.getItem(key)+'</div>');
         $(elem).append('<div class="card-footer bg-transparent"><small class="text-muted">'+key+'</small></div>');
-        $(elem).append('<button class="del">x</button>');
+        $(elem).append('<button class="del"></button>');
         $("#myList").append(elem);
     }
     $(".del").on("click",function(){      
