@@ -1,0 +1,56 @@
+#add{
+    border-radius: 50%;
+    background-color: #2bff00;
+    width: 40pt;
+    height: 40pt;
+    color: aliceblue;
+    text-align: center;
+    font-size: 2em;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+.del{
+    background-color: #ff0000;
+    position: absolute;
+    color: aliceblue;
+    text-align: center;
+    font-size: .5em;
+    width: 15pt;
+    height: 15pt;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    display: none;
+}
+.card:hover .del{
+    display: block;
+}
+button {
+    display: inline-block;
+    font: normal 17px arial;
+    transition: 0.2s;
+    transition-delay: 0.2s;
+  }
+.card{
+    width: 20%;
+    flex-grow: 0;
+    min-width: 150px;
+    padding: 20px;
+    margin: 20px;
+    word-wrap: break-word;
+    position: relative;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+#myList{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card-footer{
+    padding: 0;
+    line-height: 1;
+    /* background-color: rgba(51, 51, 51, 51);
+    position: absolute; */
+}
