@@ -19,9 +19,9 @@ $(()=>{
         location.reload();
     })
     
-    $(".card").on(
+    $(".card-body").on(
         "click", function(){
-            let key = $(this).children().eq(1).text();
+            let key = $(this).siblings().text();
             console.log(key);
             let val=prompt('Заметка');
             localStorage.setItem(key,val);
