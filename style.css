@@ -1,34 +1,69 @@
+.body__wrapper {  /* Обёртка-центровщик */
+  width: 70%;
+  margin: 20px auto 0 auto;
+  background: radial-gradient(at top, rgb(254, 255, 255), rgb(167, 206, 204));
+  border: 1px solid black;
+  line-height: 1;
+}
+.body__header {  /* Блок с заголовком и кнопкой */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto 20px auto;
+  padding-top: 20px;
+}
+.body__name { /* Отступ справа от заголовка */
+  display: block;
+  margin-right: 10px;
+}
 #add{
-    border-radius: 50%;
-    background-color: #2bff00;
+    background-color: rgb(43, 255, 0);
     width: 40pt;
     height: 40pt;
-    color: aliceblue;
-    text-align: center;
-    font-size: 2em;
-    margin: 20px auto;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    color: #1c1c1c;
+    font-size: 40px; /* Сделал размер шрифта в px + увеличил размер "Плюса" */
+    margin: 0; /* Обнулил отступы */
+}
+.body__button #add{
+    font: normal 17px arial;
+    margin: auto;
 }
 .del{
-    background-color: #ff0000;
+    background-color: rgb(255, 0, 0);
     position: absolute;
     color: aliceblue;
-    text-align: center;
+    padding: 1pt;
     font-size: .5em;
     width: 15pt;
     height: 15pt;
     right: 0;
     top: 0;
-    border-radius: 50%;
+}
+.edit{
+    background-color: rgb(251, 255, 0);
+    position: absolute;
+    color: aliceblue;
+    padding: 1pt;
+    font-size: .5em;
+    width: 15pt;
+    height: 15pt;
+    left: 0;
+    top: 0;
+}
+.card button{
     display: none;
 }
-.card:hover .del{
+
+.card:hover button{
     display: block;
 }
-button {
-    display: inline-block;
-    font: normal 17px arial;
-    transition: 0.2s;
+.body__button { /* Сделал класс для кнопки вместо глобального стиля*/
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    transition: 0.5s;
     transition-delay: 0.2s;
   }
 .card{
@@ -45,12 +80,9 @@ button {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .card-footer{
     padding: 0;
-    line-height: 1;
-    /* background-color: rgba(51, 51, 51, 51);
-    position: absolute; */
 }
