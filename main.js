@@ -20,10 +20,7 @@ $(()=>{
     })
     $(".card-body").on(
         "click", function(){
-            let key = $(this).siblings().eq(2).text();
-            console.log(key);
-            console.log($(this).siblings().eq(1).text());
-            console.log($(this).siblings().eq(0).text());
+            let key = $(this).siblings().eq(0).text();
             let val=prompt('Заметка');
             localStorage.setItem(key,val);
             location.reload();
