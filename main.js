@@ -21,7 +21,7 @@ $(()=>{
     
     $(".card-body").on(
         "click", function(){
-            let key = $(this).sibling().eq(1).text();
+            let key = $(this).siblings().eq(1).text();
             console.log(key);
             let val=prompt('Заметка');
             localStorage.setItem(key,val);
