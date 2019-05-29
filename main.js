@@ -2,7 +2,7 @@ $(()=>{
     $("#add").on("click", ()=>{
         let key= new Date();
         let val=prompt('Заметка');
-        if val==null {val=""};
+        //if val==null {val=""};
         localStorage.setItem(key,val);
         location.reload();
     })
@@ -23,7 +23,7 @@ $(()=>{
         "click", function(){
             let key = $(this).siblings().eq(0).text();
             let val=prompt('Заметка');
-            if val==null {val=""};
+            //if val==null {val=""};
             localStorage.setItem(key,val);
             location.reload();
         }
