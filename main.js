@@ -25,30 +25,21 @@ $(()=>{
         let elem=$('<div class="card"></div>');
         $(elem).append('<div class="card-body">'+localStorage.getItem(key)+'</div>');
         $(elem).append('<div class="card-footer bg-transparent"><small class="text-muted">'+key+'</small></div>');
-<<<<<<< HEAD
         $(elem).append('<button class="body__button del">&#128939</button>');
         $(elem).append('<button class="body__button edit">&#x270e</button>');
-=======
-        $(elem).append('<button class="del"></button>');
->>>>>>> 3982a5aa02d45f300d0653ad45a393a71cb95ec2
+
         $("#myList").append(elem);
     }
     $(".del").on("click",function(){      
         let key = $(this).siblings().children().text();
         localStorage.removeItem(key);
         location.reload();
-<<<<<<< HEAD
     }) 
     $(".edit").on(
         "click", function(){
             let key = $(this).siblings().eq(1).text();
             console.log(key);
-=======
-    })
-    $(".card-body").on(
-        "click", function(){
-            let key = $(this).siblings().eq(0).text();
->>>>>>> 3982a5aa02d45f300d0653ad45a393a71cb95ec2
+
             let val=prompt('Заметка');
             //if val==null {val=""};
             localStorage.setItem(key,val);
