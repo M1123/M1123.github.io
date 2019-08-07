@@ -5,8 +5,6 @@ const colors=[
     'bg-danger',
     'bg-warning'
 ]
-
-let i=0;
 $(()=>{
     $("#add").on("click", ()=>{
         let dat= new Date(); 
@@ -24,7 +22,7 @@ $(()=>{
             var toDay = Y + '.' + M + '.' + D;
             var clock = H + ':' + I + ':' + S;
         let key= toDay+" "+clock;
-        let val=prompt('Заметка');
+        let val='';
         let array = [val,0];
         localStorage.setItem(key,JSON.stringify(array));
         location.reload();
@@ -35,38 +33,26 @@ $(()=>{
         $("#myList").append(`<div class="card ${colors[array[1]]}">
         <div class="card-body" contenteditable>${array[0]}</div>
         <button class="body__button del">&#128939</button>
-        <button class="body__button chbg">🖌</button>
         <footer class="card-footer"><small>${key}</small></footer></div>`);
     }
     $(".del").on("click",function(){      
         let key = $(this).siblings().children().text();
         localStorage.removeItem(key);
-        location.reload();
+        $(this).parent().css("display","none");
     }) 
-    // $(".edit").on("click", function(){
-    //     let key = $(this).siblings().eq(2).text();
-    //     let array = JSON.parse(localStorage.getItem(key));
-    //     array[0]=prompt('Заметка',array[0]);            
-    //     localStorage.setItem(key,JSON.stringify(array));
-    //     location.reload();
-    //     }
-    // )
     $(".card-body").on("blur",function(){
-        let key = $(this).siblings().eq(2).text();
+        let key = $(this).siblings().eq(1).text();
         let array = JSON.parse(localStorage.getItem(key));
         array[0]=$(this).text();            
         localStorage.setItem(key,JSON.stringify(array));
-    }
-        
-    )
-    $(".chbg").on("click", function(){
-        console.log($(this).siblings());
-        
-        let key = $(this).siblings().eq(2).text();
+    })
+    $(".card-footer").on("click", function(){        
+        let key = $(this).text();
         let array = JSON.parse(localStorage.getItem(key));
+        $(this).parent().removeClass(colors[array[1]]);
         array[1]=(array[1]+1)%5;
+        $(this).parent().addClass(colors[array[1]]);
         localStorage.setItem(key,JSON.stringify(array));
-        location.reload();
         }
     )
 })

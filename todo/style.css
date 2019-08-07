@@ -43,36 +43,32 @@
     right: 0;
     top: 0;
 }
-.chbg{
-    background-color: rgb(251, 255, 0);
-    position: absolute;
-    color: aliceblue;
-    padding: 1pt;
-    font-size: .5em;
-    width: 15pt;
-    height: 15pt;
-    left: 0;
-    top: 0;
-}
 .card button{
     display: none;
 }
-
 .card:hover button{
     display: block;
 }
-.body__button { /* Сделал класс для кнопки вместо глобального стиля*/
-    border-radius: 50%;
+.body__button {
+    /*Сделалклассдлякнопкивместоглобальногостиля*/border-radius: 50%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     transition: 0.5s;
     transition-delay: 0.2s;
-  }
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
 #myList{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+}
+.card{
+  margin: 20px 10px;
+  flex-grow: 1;
 }
 .card-footer:hover{
     cursor: pointer;
