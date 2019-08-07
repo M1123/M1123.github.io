@@ -22,11 +22,13 @@
 }
 #add{
     background-color: rgb(43, 255, 0);
-    width: 40pt;
-    height: 40pt;
+    width: 8vw;
+    height: 8vw;
+    line-height: 8vw;
     color: #1c1c1c;
-    font-size: 40px; /* Сделал размер шрифта в px + увеличил размер "Плюса" */
+    font-size: 4;  /*Сделал размер шрифта в px + увеличил размер "Плюса" */
     margin: 0; /* Обнулил отступы */
+    vertical-align: middle;
 }
 .body__button #add{
     font: normal 17px arial;
