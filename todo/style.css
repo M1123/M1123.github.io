@@ -1,8 +1,9 @@
 .body__wrapper {  /* Обёртка-центровщик */
-  width: 70%;
-  margin: 20px auto 0 auto;
+  width: 80vw;
+  min-height: 100vh;
+  margin: 0 auto;
   background: radial-gradient(at top, rgb(254, 255, 255), rgb(167, 206, 204));
-  border: 1px solid black;
+  border: 1px solid aliceblue;
   line-height: 1;
 }
 .body__header {  /* Блок с заголовком и кнопкой */
