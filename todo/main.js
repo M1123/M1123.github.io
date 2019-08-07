@@ -1,3 +1,11 @@
+const colors=[
+    'bg-light',
+    'bg-secondary',
+    'bg-success',
+    'bg-danger',
+    'bg-warning'
+]
+let i=0;
 $(()=>{
     $("#add").on("click", ()=>{
         let dat= new Date(); 
@@ -16,15 +24,18 @@ $(()=>{
             var clock = H + ':' + I + ':' + S;
         let key= toDay+" "+clock;
         let val=prompt('Заметка');
-        //if val==null {val=""};
-        localStorage.setItem(key,val);
+        let array = [val,0];
+        localStorage.setItem(key,JSON.stringify(array));
         location.reload();
     })
     for (let i=0;i<localStorage.length;i++){
         let key = localStorage.key(i);
-        let elem=$('<div class="card"></div>');
-        $(elem).append('<div class="card-body">'+localStorage.getItem(key)+'</div>');
-        $(elem).append('<div class="card-footer bg-transparent"><small class="text-muted">'+key+'</small></div>');
+        let array = JSON.parse(localStorage.getItem(key));
+        let bg=array[1]
+        console.log(colors[bg]);
+        let elem=$('<div class="card '+colors[bg]+'"></div>');
+        $(elem).append('<div class="card-body">'+array[0]+'</div>');
+        $(elem).append('<div class="card-footer"><small class="text-muted">'+key+'</small></div>');
         $(elem).append('<button class="body__button del">&#128939</button>');
         $(elem).append('<button class="body__button edit">&#x270e</button>');
 
@@ -38,11 +49,26 @@ $(()=>{
     $(".edit").on(
         "click", function(){
             let key = $(this).siblings().eq(1).text();
+            let array = JSON.parse(localStorage.getItem(key));
+            array[0]=prompt('Заметка',array[0]);
+            console.log(array[1]);
+            
+            localStorage.setItem(key,JSON.stringify(array));
+            location.reload();
+        }
+    )
+    $(".card-body").on(
+        "click", function(){
+            let key = $(this).siblings().eq(0).text();
             console.log(key);
-
-            let val=prompt('Заметка',localStorage.getItem(key));
-            //if val==null {val=""};
-            localStorage.setItem(key,val);
+            
+            let array = JSON.parse(localStorage.getItem(key));
+            let bg= array[1];
+            bg++;
+            array[1]=bg%5;
+            console.log(bg);
+            
+            localStorage.setItem(key,JSON.stringify(array));
             location.reload();
         }
     )
