@@ -1,12 +1,19 @@
 .body__wrapper {  /* Обёртка-центровщик */
-  width: 80vw;
+  width: 90vw;
   min-height: 100vh;
   margin: 0 auto;
   background: radial-gradient(at top, rgb(254, 255, 255), rgb(167, 206, 204));
   border: 1px solid aliceblue;
   line-height: 1;
 }
-.body__header {  /* Блок с заголовком и кнопкой */
+@media screen and (max-width: 600px){
+  .body__wrapper{
+      width: 96vw;
+      zoom: 2;
+  }
+}
+
+.cWrapper{  /* Блок с заголовком и кнопкой */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -16,23 +23,13 @@
   margin: 0 auto 20px auto;
   padding-top: 20px;
 }
-.body__name { /* Отступ справа от заголовка */
-  display: block;
-  margin-right: 10px;
-}
 #add{
-    background-color: rgb(43, 255, 0);
-    width: 8vw;
-    height: 8vw;
-    line-height: 8vw;
-    color: #1c1c1c;
-    font-size: 4;  /*Сделал размер шрифта в px + увеличил размер "Плюса" */
-    margin: 0; /* Обнулил отступы */
-    vertical-align: middle;
-}
-.body__button #add{
-    font: normal 17px arial;
-    margin: auto;
+  background-color: rgb(43, 255, 0);
+  width: 8vw;
+  height: 8vw;
+  line-height: 8vw;
+  color: #1c1c1c;
+  margin: 0; /* Обнулил отступы */
 }
 .del{
     background-color: rgb(255, 0, 0);
@@ -52,7 +49,7 @@
     display: block;
 }
 .body__button {
-    /*Сделалклассдлякнопкивместоглобальногостиля*/border-radius: 50%;
+    /*классдлякнопкивместоглобальногостиля*/border-radius: 50%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     transition: 0.5s;
     transition-delay: 0.2s;
@@ -71,7 +68,9 @@
 .card{
   margin: 20px 10px;
   flex-grow: 1;
+  width: 30%;
 }
+
 .card-footer:hover{
     cursor: pointer;
 }
