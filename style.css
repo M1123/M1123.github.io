@@ -1,0 +1,32 @@
+/* nav>ul{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 70%;
+}
+ul>li{
+    margin: 5px;
+    padding: 2px;
+    text-align: center;
+    flex-grow: 1;
+    list-style-type: none;
+    background-color: #9f2dcc;
+    box-shadow: 2px solid white;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+} */
+/* li>a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+li>a:hover{
+    text-decoration: none;
+    color: #fff;
+} */
+.popup{
+    display: none;
+}
