@@ -1,0 +1,121 @@
+.main{
+    background-color: #dfe4e7;
+    margin: auto;
+    padding: 25px;    
+    width: 1025px;
+}
+.wrapper{
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: -5px 5px 10px #00000080;
+    -webkit-box-shadow: -5px 5px 10px #00000080;
+    -moz-box-shadow: -5px 5px 10px #00000080;
+    border-collapse: separate;
+    font-size: 16pt;
+    padding: 10px;
+}
+.main__title{
+    color: #7c002f;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 24pt;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 1000px;
+}
+.content__header{
+    font-family: Arial;
+    font-size: 16pt;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+}
+.content__section{
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #00000080;
+    -webkit-box-shadow: 0 0 10px #00000080;
+    -moz-box-shadow: 0 0 10px #00000080;
+    border-collapse: separate;
+    margin: 10px;
+    width: 302px;
+}
+.content__item{
+    background-color: #7c7c7c;
+    border: 1px solid #7c7c7c;
+    color: #fff;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 16pt;
+    margin: 5px;
+    padding: 20px;
+    text-align: center;
+}
+.content__item--active{
+    background-color: #7c002f;
+    border: 1px solid #7c002f;
+}
+.content__item--visited{
+    background-color: #4c4c4c;
+    border: 1px solid #7c002f;
+}
+.footer{
+    background-image: url(https://i.postimg.cc/wvj3S6tY/arrow4.png);
+    height: 28px;
+    margin: auto;
+    width: 517px;
+}
+.modal{
+    background-color: #f9fdc0;
+    border: 1px solid #000;
+    display: none;
+    left: 50%;
+    margin: auto;
+    padding: 0 5px 0 5px;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 595px;
+    z-index: 10;
+}
+.modal--active{
+    display: block;
+}
+.modal__header{
+    display: flex;
+    font-size: 16pt;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+}
+.modal__items{
+    padding: 5px;
+}
+.modal__item{
+    background-image: url(https://i.postimg.cc/0QXrvLmM/bullit.png);
+    background-position: top 6px left 0;
+    background-repeat: no-repeat;
+    color: #000;
+    font-family: Arial;
+    font-size: 16pt;
+    text-indent: 25px;
+}
+.modal__title{
+    flex-grow: 1;
+}
+.modal__close{
+    background-image: url(https://i.postimg.cc/Zn9n5VFf/but-close.png);
+    cursor: pointer;
+    flex-grow: 0;
+    height: 43px;
+    width: 50px;
+}
